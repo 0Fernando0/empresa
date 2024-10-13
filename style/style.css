@@ -1,1 +1,98 @@
 @charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-primary: #69E5E5;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    font-family: "JetBrains Mono", monospace;
+}
+
+header,main,footer{
+    padding: 0px 70px;
+}
+
+header{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1{
+        font-size: 22px;
+        font-weight: normal;
+        span{
+            color: var(--cor-primary);
+        }
+    }
+    nav{
+        display: flex;
+        gap: 15px;
+        position: relative;
+        a{
+            display: flex;
+            align-items: end;
+            gap: 4px;
+            position: relative;
+            &::before{
+                transition: 1s;
+                border-radius: 8px;
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                height: 4px;
+                width: 0%;
+                background-color: var(--cor-primary);
+            }
+            &:hover::before{
+                width: 100%;
+            }
+        }
+    }
+}
+
+section:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    article{
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h2{
+            color: var(--cor-primary);
+        }
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            cursor: pointer;
+            border: 1px solid black;
+            width: 100%;
+            height: 40px;
+            font-size: 1em;
+            border-radius: 4px;
+            background-color: var(--cor-primary);
+            transition: 1s;
+            box-shadow: 2px 2px 5px black;
+            &:hover{
+                background-color: aqua;
+            }
+        }
+    }
+}
