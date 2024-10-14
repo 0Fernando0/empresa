@@ -213,8 +213,23 @@ section:nth-child(5){
 
 footer{
     height: 100px;
-    background-color: var(--cor-primary);
     display: flex;
     align-items: center;
     justify-content: center;
+    a{
+        position: relative;
+        &::before{
+            transition: 1s;
+            border-radius: 8px;
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            height: 4px;
+            width: 0%;
+            background-color: var(--cor-primary);
+        }
+        &:hover::before{
+            width: 100%;
+        }
+    }
 }
