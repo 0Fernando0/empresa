@@ -92,6 +92,7 @@ section:nth-child(1){
             box-shadow: 2px 2px 5px black;
             &:hover{
                 background-color: aqua;
+                transform: scale(.9);
             }
         }
     }
@@ -110,6 +111,7 @@ section:nth-child(2){
         &>img{
             width: 250px;
             border-radius: 8px;
+            box-shadow: 2px 2px 6px var(--cor-primary);
         }
         h2{
             font-size: 1em;
@@ -166,7 +168,7 @@ section:nth-child(3){
         align-items: center;
         gap: 5px;
         &:hover{
-            box-shadow: 2px 2px 6px black;
+            box-shadow: 2px 2px 6px var(--cor-primary);
             animation: box;
             animation-duration: 3s;
             animation-iteration-count: infinite
@@ -186,7 +188,7 @@ section:nth-child(4){
         align-items: center;
         justify-content: end;
         gap: 5px;
-        box-shadow: 2px 2px 6px black;
+        box-shadow: 2px 2px 6px var(--cor-primary);
     }
 }
 
